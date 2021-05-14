@@ -1,0 +1,15 @@
+[package]
+name = "cgrep"
+version = "0.1.0"
+authors = ["Dan Aloni <dan@kernelim.com>"]
+edition = "2021"
+
+[dependencies]
+structopt = "0.3"
+regex = { version = "1.8", features = ["perf"] }
+thiserror = "1"
+isatty = "0.1"
+
+[profile.release-lto]
+inherits = "release"
+lto = true
